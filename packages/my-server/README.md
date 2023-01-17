@@ -17,6 +17,11 @@ All needed components are expected to be under one project, one repo, with this 
 yarn server dev
 ```
 
+## studies
+
+- [OAuth 2.0, JWT](https://gilssang97.tistory.com/55)
+- [JWT와 OAuth 차이점](https://lewis-kku.tistory.com/34)
+
 ## issues
 
 ### 23-01-17
