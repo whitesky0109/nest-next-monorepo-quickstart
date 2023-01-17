@@ -1,10 +1,16 @@
 import { FC } from 'react';
 import Link from 'next/link';
 
+import styled from 'styled-components';
+
+const SidebarStyled = styled.div`
+  margin-bottom: 15;
+`;
+
 const Sidebar: FC = () => {
   return (
     <div>
-      <div style={{ marginBottom: 15 }}>
+      <SidebarStyled>
         <Link
           href="/views/home"
           as="/"
@@ -16,7 +22,7 @@ const Sidebar: FC = () => {
         >
           EXAMPLE APP
         </Link>
-      </div>
+      </SidebarStyled>
       <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
         <li>
           <Link href="/views/home" as="/">

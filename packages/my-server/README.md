@@ -18,4 +18,7 @@ yarn server dev
 
 ## issues
 
-[22-01-17](https://minemanemo.tistory.com/168)
+### 23-01-17
+
+- [monorepo import error](https://minemanemo.tistory.com/168)
+- [apply styled-component](https://tesseractjh.tistory.com/164)
