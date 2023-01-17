@@ -5,32 +5,32 @@ const Sidebar: FC = () => {
   return (
     <div>
       <div style={{ marginBottom: 15 }}>
-        <Link href="/views/home" as="/">
-          <a
-            style={{
-              fontSize: 22,
-              textDecoration: 'none',
-              textTransform: 'uppercase',
-            }}
-          >
-            EXAMPLE APP
-          </a>
+        <Link
+          href="/views/home"
+          as="/"
+          style={{
+            fontSize: 22,
+            textDecoration: 'none',
+            textTransform: 'uppercase',
+          }}
+        >
+          EXAMPLE APP
         </Link>
       </div>
       <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
         <li>
           <Link href="/views/home" as="/">
-            <a>Home</a>
+            Home
           </Link>
         </li>
         <li>
           <Link href="/views/about" as="/about">
-            <a>About</a>
+            About
           </Link>
         </li>
         <li>
           <Link href="/views/blog" as="/blog" prefetch={false}>
-            <a>Blog</a>
+            Blog
           </Link>
         </li>
       </ul>

@@ -25,20 +25,17 @@ const PostPreview: FC<Props> = ({ post }) => {
           query: { slug: post.slug },
         }}
         as={`/blog/${post.slug}`}
+        style={{
+          display: 'inline-flex',
+          background: 'black',
+          color: 'white',
+          padding: '5px 10px',
+          textTransform: 'uppercase',
+          textDecoration: 'none',
+          fontSize: 12,
+        }}
       >
-        <a
-          style={{
-            display: 'inline-flex',
-            background: 'black',
-            color: 'white',
-            padding: '5px 10px',
-            textTransform: 'uppercase',
-            textDecoration: 'none',
-            fontSize: 12,
-          }}
-        >
-          View
-        </a>
+        View
       </Link>
     </div>
   );
