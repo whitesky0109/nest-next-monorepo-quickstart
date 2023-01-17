@@ -1,0 +1,11 @@
+{
+  "name": "nest-next-monorepo-quickstart",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/whitesky0109/nest-next-monorepo-quickstart.git",
+  "author": "whitesky0109@naver.com",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ]
+}
