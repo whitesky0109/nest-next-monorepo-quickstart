@@ -6,6 +6,10 @@ All needed components are expected to be under one project, one repo, with this 
 
 > You need to build the project first
 
+## motivations
+
+- [swagger](https://docs.nestjs.com/openapi/introduction)
+
 ## issues
 
 [22-01-17](https://minemanemo.tistory.com/168)
