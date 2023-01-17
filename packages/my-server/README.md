@@ -9,6 +9,7 @@ All needed components are expected to be under one project, one repo, with this 
 ## motivations
 
 - [swagger](https://docs.nestjs.com/openapi/introduction)
+- [Authentication](https://docs.nestjs.com/security/authentication)
 
 ## how to start development
 
