@@ -9,7 +9,8 @@
     "packages/*"
   ],
   "scripts": {
-    "server": "yarn workspace my-server"
+    "server": "yarn workspace my-server",
+    "react": "yarn workspace my-react"
   },
   "packageManager": "yarn@3.3.1"
 }
