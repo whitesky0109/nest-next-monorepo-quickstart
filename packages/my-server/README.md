@@ -10,6 +10,12 @@ All needed components are expected to be under one project, one repo, with this 
 
 - [swagger](https://docs.nestjs.com/openapi/introduction)
 
+## how to start development
+
+```zsh
+yarn server dev
+```
+
 ## issues
 
 [22-01-17](https://minemanemo.tistory.com/168)
