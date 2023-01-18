@@ -30,3 +30,8 @@ yarn server dev
 
 - [monorepo import error](https://minemanemo.tistory.com/168)
 - [apply styled-component](https://tesseractjh.tistory.com/164)
+
+### 23-01-18
+
+- [Next.js - _app.js의 Layout 적용 제외하기](https://velog.io/@bigbrothershin/Next.js-Layout-%EC%A0%81%EC%9A%A9-%EC%A0%9C%EC%99%B8%ED%95%98%EA%B8%B0)
+- [Add TypeScript type to Next.js getInitialProps](https://linguinecode.com/post/next-js-typescript-getinitialprops)
