@@ -14,7 +14,7 @@ All needed components are expected to be under one project, one repo, with this 
 ## how to start development
 
 ```zsh
-yarn server dev
+yarn dev
 ```
 
 ## studies
@@ -35,3 +35,4 @@ yarn server dev
 
 - [Next.js - _app.js의 Layout 적용 제외하기](https://velog.io/@bigbrothershin/Next.js-Layout-%EC%A0%81%EC%9A%A9-%EC%A0%9C%EC%99%B8%ED%95%98%EA%B8%B0)
 - [Add TypeScript type to Next.js getInitialProps](https://linguinecode.com/post/next-js-typescript-getinitialprops)
+- [NestJS - Redirect user from guard when check fails](https://stackoverflow.com/a/65883198)
