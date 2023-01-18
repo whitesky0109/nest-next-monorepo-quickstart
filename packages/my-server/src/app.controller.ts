@@ -1,6 +1,6 @@
 import { Controller, Get, Render, Query, UseGuards } from '@nestjs/common';
 
-import { JwtAuthGuard } from './auth/strategies/jwt/guard';
+import { JwtAuthGuard } from './modules/auth/strategies/jwt/guard';
 
 @Controller()
 @UseGuards(JwtAuthGuard)
