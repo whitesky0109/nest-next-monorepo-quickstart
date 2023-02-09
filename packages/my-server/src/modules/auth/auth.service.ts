@@ -19,6 +19,16 @@ export class AuthService {
     return null;
   }
 
+  async existUser(username: string) {
+    const user = await this.usersService.findOne(username);
+    if(user) {
+      const { password, ...result } = user;
+      return result;
+    }
+
+    return null;
+  }
+
   async login(user: any) {
     const payload = { username: user.username, sub: user.userId };
     return this.jwtService.sign(payload);

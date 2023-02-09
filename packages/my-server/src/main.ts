@@ -1,13 +1,13 @@
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import cookieParser from 'cookie-parser';
 
 import { AppModule } from './application.module';
-import { ViewAuthFilter } from './filters/ViewAuthFilter';
 
 async function bootstrap() {
   const server = await NestFactory.create(AppModule);
 
-  server.useGlobalFilters(new ViewAuthFilter());
+  server.use(cookieParser());
 
   const config = new DocumentBuilder()
     .setTitle('nest-next-monorepo-quickstart')
