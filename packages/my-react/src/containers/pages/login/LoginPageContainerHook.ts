@@ -3,14 +3,12 @@ import { useState } from "react";
 export interface ILoginPageContainerState {
   id?: string,
   password?: string,
-  authKey?: string | null,
 }
 
 export default function LoginPageContainerHook() {
   const [state, updateState] = useState<ILoginPageContainerState>({
     id: '',
     password: '',
-    authKey: null,
   });
 
   const setState = (state: ILoginPageContainerState = {}) => updateState(prev => Object.assign({}, prev, state));
@@ -47,16 +45,6 @@ export default function LoginPageContainerHook() {
 
       if(response.redirected) {
         window.location.href = response.url;
-      }
-
-      switch (response.status) {
-        case 201: {
-          const authKey = await response.text();
-          setState({ authKey });
-        }
-        // case 401:
-        default:
-
       }
     }
   }
