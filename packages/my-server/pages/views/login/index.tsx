@@ -1,35 +1,8 @@
-import React from 'react';
 import { NextPage } from 'next';
 
-import LoginPageContainerHook from '../../../containers/pages/login/LoginPageContainerHook';
+import Page from 'my-react/src/pages/LoginPage';
 
-interface Props {
-  pathname: string;
-}
-
-const LoginPage: NextPage<Props> = () => {
-  const {
-    state: { id, password },
-    onChangeId,
-    onChangePassword,
-    onClickLogin,
-  } = LoginPageContainerHook();
-
-  return (
-    <>
-      <div>
-        <span>id</span>
-        <input type="text" value={id} onChange={onChangeId} />
-      </div>
-
-      <div>
-        <span>password</span>
-        <input type="password" value={password} onChange={onChangePassword} />
-      </div>
-      <button onClick={onClickLogin}>login</button>
-    </>
-  );
-};
+const LoginPage: NextPage = Page;
 
 LoginPage.getInitialProps = (ctx) => {
   const { pathname } = ctx;
@@ -37,4 +10,4 @@ LoginPage.getInitialProps = (ctx) => {
   return { pathname };
 };
 
-export default LoginPage;
+export default Page;

@@ -8,7 +8,7 @@ interface PageProps {
   pathname?: string; // ref. view/login/index.tsx
 }
 
-const MyApp: AppComponentType<PageProps> = ({ Component, pageProps }) => {
+const RootApp: AppComponentType<PageProps> = ({ Component, pageProps }) => {
   switch (pageProps && pageProps.pathname) {
     case '/views/login': {
       return <Component {...pageProps} />
@@ -28,7 +28,7 @@ const MyApp: AppComponentType<PageProps> = ({ Component, pageProps }) => {
   }
 };
 
-MyApp.getInitialProps = async (context: AppContextType) => {
+RootApp.getInitialProps = async (context: AppContextType) => {
   const { ctx, Component } = context;
   let pageProps = {};
 
@@ -40,4 +40,4 @@ MyApp.getInitialProps = async (context: AppContextType) => {
   return { pageProps };
 };
 
-export default MyApp;
+export default RootApp;
