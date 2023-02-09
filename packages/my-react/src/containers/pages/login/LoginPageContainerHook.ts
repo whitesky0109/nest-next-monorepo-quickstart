@@ -45,6 +45,10 @@ export default function LoginPageContainerHook() {
         }),
       });
 
+      if(response.redirected) {
+        window.location.href = response.url;
+      }
+
       switch (response.status) {
         case 201: {
           const authKey = await response.text();
