@@ -2,9 +2,7 @@ import React from 'react';
 
 import { LoginPageContainerHook } from '../containers/pages/login/LoginPageContainerHook';
 
-// export interface Props {}
-
-const LoginPage: React.FC = () => {
+export const LoginPage: React.FC = () => {
   const {
     state: { id, password },
     onChangeId,

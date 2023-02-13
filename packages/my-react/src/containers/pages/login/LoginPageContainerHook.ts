@@ -5,7 +5,7 @@ export interface ILoginPageContainerState {
   password?: string;
 }
 
-export function LoginPageContainerHook() {
+export const LoginPageContainerHook = () => {
   const [state, updateState] = useState<ILoginPageContainerState>({
     id: '',
     password: '',
@@ -56,4 +56,4 @@ export function LoginPageContainerHook() {
   };
 
   return self;
-}
+};

@@ -11,3 +11,4 @@
 ### 23-02-13
 
 - [Webpack 5 in storybook](https://storybook.js.org/docs/react/builders/webpack#webpack-5)
+- [[React] Typescript + eslint + prettier 설정](https://velog.io/@he0_077/React-Typescript-eslint-prettier-%EC%84%A4%EC%A0%95)

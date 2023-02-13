@@ -37,7 +37,12 @@ const mod = {
   rules: {
     'react/prop-types': 'error',
 
-    'import/extensions': 'off',
+    "import/extensions": ["error", "ignorePackages", {
+      "js": "never",
+      "jsx": "never",
+      "ts": "never",
+      "tsx": "never"
+    }]
   },
   settings: {
     "import/resolver": {
