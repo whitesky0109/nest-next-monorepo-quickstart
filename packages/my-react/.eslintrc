@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": ["error", {
+      "extensions": [
+        ".tsx", ".jsx", ".js", ".ts"
+      ]
+    }],
+    "react/function-component-definition": ["error", {
+      "namedComponents": ["function-declaration", "arrow-function"]
+    }]
+  }
+}

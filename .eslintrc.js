@@ -35,28 +35,14 @@ const mod = {
     'prettier',
   ],
   rules: {
-    'react/prop-types': ['error'],
-    'class-methods-use-this': 'warn',
-    'no-useless-constructor': 'warn',
+    'react/prop-types': 'error',
 
-    'react/jsx-props-no-spreading': 'warn',
-    'react/jsx-filename-extension': ['error', {
-      "extensions": [
-        ".tsx", '.jsx', '.js', '.ts'
-      ]
+    'import/extensions': 'off',
+
+    '@typescript-eslint/no-unused-vars': ['error', {
+      argsIgnorePattern: '^_',
+      varsIgnorePattern: '^_'
     }],
-    'react/function-component-definition': [
-      'error', {
-        namedComponents: ['function-declaration', 'arrow-function'],
-      },
-    ],
-
-    'import/extensions': ['off'],
-
-    '@typescript-eslint/no-unused-vars': [
-      'error',
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-    ],
   },
   settings: {
     "import/resolver": {
