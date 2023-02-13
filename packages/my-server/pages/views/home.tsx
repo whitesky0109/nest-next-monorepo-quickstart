@@ -1,5 +1,5 @@
-import React from 'react';
 import { NextPage, NextPageContext } from 'next';
+import React from 'react';
 
 interface Props {
   query: { name?: string };

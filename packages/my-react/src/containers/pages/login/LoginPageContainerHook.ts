@@ -11,8 +11,9 @@ export const LoginPageContainerHook = () => {
     password: '',
   });
 
-  const setState = (item: ILoginPageContainerState = {}) =>
-    updateState(prev => ({ ...prev, ...item }));
+  const setState = (item: ILoginPageContainerState = {}) => (
+    updateState((prev) => ({ ...prev, ...item }))
+  );
 
   const self = {
     state,

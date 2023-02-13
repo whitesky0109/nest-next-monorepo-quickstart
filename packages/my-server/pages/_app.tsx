@@ -1,14 +1,10 @@
-import React from 'react';
 import type { AppProps } from 'next/app';
 import { AppContextType, NextComponentType } from 'next/dist/shared/lib/utils';
+import React from 'react';
 
 import Sidebar from '../components/sidebar';
 
-export type AppComponentType<PP> = NextComponentType<
-  AppContextType,
-  any,
-  AppProps<PP>
->;
+export type AppComponentType<PP> = NextComponentType<AppContextType, any, AppProps<PP>>;
 
 interface PageProps {
   pathname?: string; // ref. view/login/index.tsx

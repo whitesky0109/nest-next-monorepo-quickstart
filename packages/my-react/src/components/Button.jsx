@@ -1,5 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import './button.css';
 
 /**
@@ -61,5 +62,5 @@ export default Button;
     size: string,
     label: React.ReactNode,
   }
-} ButtonProps 
+} ButtonProps
 */

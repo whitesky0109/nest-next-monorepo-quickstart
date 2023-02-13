@@ -1,4 +1,4 @@
-import express from 'express';
+// import express from 'express';
 import { Controller, Get, Render, Request, UseFilters } from '@nestjs/common';
 
 import ViewAuthFilter from '../../filters/ViewAuthFilter';
@@ -8,7 +8,8 @@ import ViewAuthFilter from '../../filters/ViewAuthFilter';
 export default class LoginController {
   @Get()
   @Render('login')
-  loginPage(@Request() _: express.Request) {
+  // loginPage(@Request() _: express.Request) {
+  loginPage() {
     return Promise.resolve();
   }
 }

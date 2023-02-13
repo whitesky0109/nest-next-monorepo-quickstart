@@ -1,30 +1,30 @@
-import React from 'react';
 import { NextPage, NextPageContext } from 'next';
+import React from 'react';
 
-import { IPost } from '../../../types';
 import PostPreview from '../../../components/post-preview';
 import BlogService from '../../../src/modules/blog/blog.service';
+import { IPost } from '../../../types';
 
 interface Props {
   posts: IPost[];
   source: string;
 }
 
-const Blog: NextPage<Props> = ({ posts, source }) => {
-  return (
+const Blog: NextPage<Props> = ({ posts, source }) => (
+  <div>
+    <h1>blog</h1>
     <div>
-      <h1>blog</h1>
-      <div>
-        {posts.map((post) => (
-          <PostPreview key={post.slug} post={post} />
-        ))}
-      </div>
-      <div style={{ fontStyle: 'italic', fontSize: 14 }}>
-        this page was rendered on the {source}
-      </div>
+      {posts.map((post) => (
+        <PostPreview key={post.slug} post={post} />
+      ))}
     </div>
-  );
-};
+    <div style={{ fontStyle: 'italic', fontSize: 14 }}>
+      this page was rendered on the
+      {' '}
+      {source}
+    </div>
+  </div>
+);
 
 // When the page was rendered server side the ctx.query will contain the data
 // returned by the controller's method. When the page was rendered on the client

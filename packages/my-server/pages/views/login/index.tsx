@@ -1,6 +1,5 @@
-import { NextPage } from 'next';
-
 import Page from 'my-react/src/pages/LoginPage';
+import { NextPage } from 'next';
 
 const LoginPage: NextPage = Page;
 
