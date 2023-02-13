@@ -9,7 +9,7 @@ import AuthService from '../../auth.service';
 export default class KakaoStrategy extends PassportStrategy(Strategy) {
   constructor(private authService: AuthService) {
     super({
-      clientID: '카카오 사이트 개발자 사이트 참조',
+      clientID: '983a6749ac20c97d5b8d7060ab32fdb5',
       // clientSecret: '',
       callbackURL: 'http://localhost:3000/auth/kakao/redirect'
     });

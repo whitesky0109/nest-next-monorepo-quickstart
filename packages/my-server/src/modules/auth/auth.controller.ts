@@ -1,10 +1,10 @@
 import {
-  Controller, Get, HttpCode, HttpStatus, Post, Redirect, Req, Request, Response, UseGuards,
+  Controller, Get, HttpCode, HttpStatus, Post, Redirect, Request, Response, UseGuards,
 } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
 import express from 'express';
 
 import AuthService from './auth.service';
+import KakaoAuthGuard from './strategies/kakao/gaurd';
 import LocalAuthGuard from './strategies/local/guard';
 
 @Controller('auth')
@@ -24,16 +24,14 @@ export default class AuthController {
   }
 
   @Get('kakao')
-  @HttpCode(200)
-  @UseGuards(AuthGuard('kakao'))
+  @UseGuards(KakaoAuthGuard)
   async kakaoLogin() {
     return HttpStatus.OK;
   }
 
   @Get('kakao/redirect')
-  @HttpCode(200)
   @Redirect('/')
-  @UseGuards(AuthGuard('kakao'))
+  @UseGuards(KakaoAuthGuard)
   async kakaoLoginCallback(@Request() req: express.Request, @Response() res: express.Response) {
     const token = await this.authService.login(req.user);
 
