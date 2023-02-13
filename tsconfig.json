@@ -33,8 +33,12 @@
     "isolatedModules": true,
     "incremental": true,
     "paths": {
-      "my-react": ["packages/my-react/*"],
-      "my-server": ["packages/my-server/*"],
+      "my-react": [
+        "packages/my-react/*"
+      ],
+      "my-server": [
+        "packages/my-server/*"
+      ],
     }
   },
   "exclude": [

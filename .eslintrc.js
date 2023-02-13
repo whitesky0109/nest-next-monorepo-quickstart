@@ -42,7 +42,27 @@ const mod = {
       "jsx": "never",
       "ts": "never",
       "tsx": "never"
-    }]
+    }],
+
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        extensions: [
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ],
+    "react/function-component-definition": [
+      "error",
+      {
+        namedComponents: [
+          "function-declaration",
+          "arrow-function"
+        ]
+      }
+    ]
   },
   settings: {
     "import/resolver": {
