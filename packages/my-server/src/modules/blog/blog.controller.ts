@@ -1,12 +1,13 @@
 import { Controller, Get, NotFoundException, Param, Render, UseGuards } from '@nestjs/common';
 
 import JwtAuthGuard from '../auth/strategies/jwt/guard';
+
 import BlogService from './blog.service';
 
 @Controller('/blog')
 @UseGuards(JwtAuthGuard)
 export default class BlogController {
-  constructor(private service: BlogService) {}
+  constructor(private service: BlogService) { }
 
   @Render('blog')
   @Get()

@@ -41,3 +41,7 @@ yarn dev
 ### 23-02-09
 
 - [[Nodejs 프레임워크]NestJS - 17. 쿠키 다루기(JWT토큰)](https://codegear.tistory.com/78)
+
+### 23-02-13
+
+- [TIL - NestJS(passport-kakao)](https://velog.io/@eslerkang/TIL-NestJSpassport-kakao)

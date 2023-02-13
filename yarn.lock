@@ -4344,6 +4344,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/passport-kakao@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@types/passport-kakao@npm:1.0.0"
+  dependencies:
+    "@types/express": "*"
+    "@types/passport": "*"
+  checksum: dca23c787efaf9d710f4e8674c2181595d879b5bc9c89424b1a86384ff5e0279c591182032b738421f844382db5fe454a8c4fe375eb5d97c9437fcab53dd2119
+  languageName: node
+  linkType: hard
+
 "@types/passport-local@npm:^1.0.35":
   version: 1.0.35
   resolution: "@types/passport-local@npm:1.0.35"
@@ -12001,6 +12011,7 @@ __metadata:
     "@types/next": ^9.0.0
     "@types/node": ^18.11.18
     "@types/passport-jwt": ^3.0.8
+    "@types/passport-kakao": ^1.0.0
     "@types/passport-local": ^1.0.35
     "@types/react": ^18.0.26
     "@typescript-eslint/eslint-plugin": ^5.48.2
@@ -12019,6 +12030,7 @@ __metadata:
     nodemon: ^2.0.20
     passport: ^0.6.0
     passport-jwt: ^4.0.1
+    passport-kakao: ^1.0.1
     passport-local: ^1.0.0
     prettier: ^2.8.3
     react: 18.2.0
@@ -12445,6 +12457,13 @@ __metadata:
   version: 1.2.2
   resolution: "num2fraction@npm:1.2.2"
   checksum: 1da9c6797b505d3f5b17c7f694c4fa31565bdd5c0e5d669553253aed848a580804cd285280e8a73148bd9628839267daee4967f24b53d4e893e44b563e412635
+  languageName: node
+  linkType: hard
+
+"oauth@npm:0.9.x":
+  version: 0.9.15
+  resolution: "oauth@npm:0.9.15"
+  checksum: 957c0d8d85300398dcb0e293953650c0fc3facc795bee8228238414f19f59cef5fd4ee8d17a972c142924c10c5f6ec50ef80f77f4a6cc6e3c98f9d22c027801c
   languageName: node
   linkType: hard
 
@@ -12939,12 +12958,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"passport-kakao@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "passport-kakao@npm:1.0.1"
+  dependencies:
+    passport-oauth2: ~1.1.2
+    pkginfo: ~0.3.0
+  checksum: ba78fde445efd3118ea64a2364de306e952b16cddc38bb61cc27cadbaf1511c3d819dcf74388cd438745fc5d13bc5708922672ef90388ebd53ae308d9ad0c0c5
+  languageName: node
+  linkType: hard
+
 "passport-local@npm:^1.0.0":
   version: 1.0.0
   resolution: "passport-local@npm:1.0.0"
   dependencies:
     passport-strategy: 1.x.x
   checksum: 86dc08b12f05f0ce1bb109780ccb0377eff45bbba70aa9c0d65f092b3ef476d344c0443517db2e9f3e5ec0ca849171ab25fb622164e0f69a677173af42b9bba7
+  languageName: node
+  linkType: hard
+
+"passport-oauth2@npm:~1.1.2":
+  version: 1.1.2
+  resolution: "passport-oauth2@npm:1.1.2"
+  dependencies:
+    oauth: 0.9.x
+    passport-strategy: 1.x.x
+    uid2: 0.0.x
+  checksum: f59e80a0753fc9516346f1857c2e43333d186ede8aef9d047450c54b83e0f655f0ad47f68376147273750cbd983247e651e679a7d13a978c32ca80d2e4ee9dd9
   languageName: node
   linkType: hard
 
@@ -13188,6 +13228,13 @@ __metadata:
   dependencies:
     find-up: ^5.0.0
   checksum: b167bb8dac7bbf22b1d5e30ec223e6b064b84b63010c9d49384619a36734caf95ed23ad23d4f9bd975e8e8082b60a83395f43a89bb192df53a7c25a38ecb57d9
+  languageName: node
+  linkType: hard
+
+"pkginfo@npm:~0.3.0":
+  version: 0.3.1
+  resolution: "pkginfo@npm:0.3.1"
+  checksum: b59f7878ed169301930f5eab767d6b82a1c1e0831c3d1381c8dd04ef8a883fc895c067d06ce6d6111eff06130ad94bd8a518c7a227cc5e9914eedab2ee8512a7
   languageName: node
   linkType: hard
 
@@ -15907,6 +15954,13 @@ __metadata:
   bin:
     uglifyjs: bin/uglifyjs
   checksum: 7b3897df38b6fc7d7d9f4dcd658599d81aa2b1fb0d074829dd4e5290f7318dbca1f4af2f45acb833b95b1fe0ed4698662ab61b87e94328eb4c0a0d3435baf924
+  languageName: node
+  linkType: hard
+
+"uid2@npm:0.0.x":
+  version: 0.0.4
+  resolution: "uid2@npm:0.0.4"
+  checksum: e92325ce2e3b7be504b19e835dbb5a8b0495031f364b08ca46745468ed0ae0f202a4fdaf99a1a2715844156efc3ab410456ae24a0f7c0ae4b0a2e9f2784edfd9
   languageName: node
   linkType: hard
 

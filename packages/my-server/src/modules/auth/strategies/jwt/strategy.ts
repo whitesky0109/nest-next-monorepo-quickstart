@@ -9,19 +9,21 @@ import jwtConstants from '../../constants';
 export default class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(private authService: AuthService) {
     super({
-      jwtFromRequest: ExtractJwt.fromExtractors([(request) => request?.cookies?.Authentication]),
+      jwtFromRequest: ExtractJwt.fromExtractors([(request) => (
+        request?.cookies?.Authentication
+      )]),
       ignoreExpiration: false,
       secretOrKey: jwtConstants.secret,
     });
   }
 
   async validate(payload: any) {
-    const user = await this.authService.existUser(payload.username);
+    // const user = await this.authService.existUser(payload.username);
 
-    if (!user) {
-      throw new UnauthorizedException();
-    }
+    // if (!user) {
+    //   throw new UnauthorizedException();
+    // }
 
-    return user;
+    return payload;
   }
 }

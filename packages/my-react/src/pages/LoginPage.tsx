@@ -24,6 +24,12 @@ export const LoginPage: React.FC = () => {
       <button type="button" onClick={onClickLogin}>
         login
       </button>
+
+      <div className="App">
+        <a href="/auth/kakao">
+          <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg" alt="kakao login" />
+        </a>
+      </div>
     </>
   );
 };
