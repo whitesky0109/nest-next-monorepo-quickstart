@@ -1,13 +1,20 @@
 import express from 'express';
-import { Controller, Get, Render, UseGuards, Request, UseFilters } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Render,
+  UseGuards,
+  Request,
+  UseFilters,
+} from '@nestjs/common';
 
-import { JwtAuthGuard } from './modules/auth/strategies/jwt/guard';
-import { ViewAuthFilter } from './filters/ViewAuthFilter';
+import JwtAuthGuard from './modules/auth/strategies/jwt/guard';
+import ViewAuthFilter from './filters/ViewAuthFilter';
 
 @Controller()
 @UseFilters(ViewAuthFilter)
 @UseGuards(JwtAuthGuard)
-export class AppController {
+export default class AppController {
   @Get()
   @Render('home')
   public index(@Request() req: express.Request) {

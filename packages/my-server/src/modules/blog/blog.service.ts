@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@nestjs/common';
+// import { Injectable, Inject } from '@nestjs/common';
 import { IPost } from '../../../types';
 
 const POSTS: Record<string, IPost> = {
@@ -20,7 +20,7 @@ const POSTS: Record<string, IPost> = {
   },
 };
 
-export class BlogService {
+export default class BlogService {
   public all(): IPost[] {
     return Object.values(POSTS);
   }

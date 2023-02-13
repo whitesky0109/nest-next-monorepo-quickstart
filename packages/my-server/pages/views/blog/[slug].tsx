@@ -1,6 +1,8 @@
+import React from 'react';
 import { NextPage, NextPageContext } from 'next';
+
 import { IPost } from '../../../types';
-import { BlogService } from '../../../src/modules/blog/blog.service';
+import BlogService from '../../../src/modules/blog/blog.service';
 
 interface Props {
   post: IPost;
@@ -17,8 +19,8 @@ const Post: NextPage<Props> = ({ post: { title, content }, source }) => {
     <div>
       <h1>{title}</h1>
       <div>
-        {content.map((block, index) => (
-          <p key={`block-${index}`}>{block}</p>
+        {content.map((block) => (
+          <p key={`block-${block}`}>{block}</p>
         ))}
       </div>
       <div style={{ fontStyle: 'italic', fontSize: 14 }}>

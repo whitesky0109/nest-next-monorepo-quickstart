@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
 import styled from 'styled-components';
@@ -7,7 +7,7 @@ const SidebarStyled = styled.div`
   margin-bottom: 15;
 `;
 
-const Sidebar: FC = () => {
+const Sidebar: React.FC = () => {
   return (
     <div>
       <SidebarStyled>

@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { RenderModule } from 'nest-next';
 import Next from 'next';
-import { AppController } from './app.controller';
-import { BlogController } from './modules/blog/blog.controller';
-import { BlogService } from './modules/blog/blog.service';
-import { AuthModule } from './modules/auth/auth.module';
-import { UsersModule } from './modules/users/users.module';
-import { LoginModule } from './modules/login/login.module';
+import AppController from './app.controller';
+import BlogController from './modules/blog/blog.controller';
+import BlogService from './modules/blog/blog.service';
+import AuthModule from './modules/auth/auth.module';
+import UsersModule from './modules/users/users.module';
+import LoginModule from './modules/login/login.module';
 
 @Module({
   imports: [
@@ -22,4 +22,4 @@ import { LoginModule } from './modules/login/login.module';
   controllers: [AppController, BlogController],
   providers: [BlogService],
 })
-export class AppModule {}
+export default class AppModule {}

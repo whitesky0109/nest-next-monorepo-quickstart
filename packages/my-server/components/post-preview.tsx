@@ -1,6 +1,7 @@
-import { FC } from 'react';
-import { IPost } from '../types';
+import React from 'react';
 import Link from 'next/link';
+
+import { IPost } from '../types';
 
 interface Props {
   post: IPost;
@@ -14,7 +15,7 @@ const excerpt = (content: string[]): string => {
   return 'No preview available...';
 };
 
-const PostPreview: FC<Props> = ({ post }) => {
+export const PostPreview: React.FC<Props> = ({ post }) => {
   return (
     <div style={{ marginBottom: 25 }}>
       <h2 style={{ fontSize: 16, textTransform: 'uppercase' }}>{post.title}</h2>

@@ -1,14 +1,19 @@
 import {
-  Controller, Get, Post, Redirect, Request, Response, UseGuards,
+  Controller,
+  Post,
+  Redirect,
+  Request,
+  Response,
+  UseGuards,
 } from '@nestjs/common';
 import express from 'express';
 
-import { AuthService } from './auth.service';
-import { LocalAuthGuard } from './strategies/local/guard';
+import AuthService from './auth.service';
+import LocalAuthGuard from './strategies/local/guard';
 
 @Controller('auth')
 @UseGuards(LocalAuthGuard)
-export class AuthController {
+export default class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post('local')
@@ -21,7 +26,7 @@ export class AuthController {
 
     res.cookie('Authentication', token, {
       httpOnly: true,
-      maxAge: 24 * 60 * 60 * 1000 // 1 day
+      maxAge: 24 * 60 * 60 * 1000, // 1 day
     });
   }
 }

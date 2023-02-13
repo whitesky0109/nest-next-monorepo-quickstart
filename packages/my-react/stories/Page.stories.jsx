@@ -1,7 +1,7 @@
-import React from 'react';
+// import React from 'react';
 import { within, userEvent } from '@storybook/testing-library';
 
-import { Page } from '../src/components';
+import Page from '../src/components';
 
 export default {
   title: 'Example/Page',
@@ -12,7 +12,7 @@ export default {
   },
 };
 
-const Template = (args) => <Page {...args} />;
+const Template = Page;
 
 // More on interaction testing: https://storybook.js.org/docs/react/writing-tests/interaction-testing
 export const LoggedOut = Template.bind({});

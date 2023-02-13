@@ -1,29 +1,34 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 export interface ILoginPageContainerState {
-  id?: string,
-  password?: string,
+  id?: string;
+  password?: string;
 }
 
-export default function LoginPageContainerHook() {
+export function LoginPageContainerHook() {
   const [state, updateState] = useState<ILoginPageContainerState>({
     id: '',
     password: '',
   });
 
-  const setState = (state: ILoginPageContainerState = {}) => updateState(prev => Object.assign({}, prev, state));
+  const setState = (item: ILoginPageContainerState = {}) =>
+    updateState(prev => ({ ...prev, ...item }));
 
   const self = {
     state,
     setState,
 
     onChangeId: (event: React.ChangeEvent<HTMLInputElement>) => {
-      const { target: { value: id } } = event;
+      const {
+        target: { value: id },
+      } = event;
       setState({ id });
     },
 
     onChangePassword: (event: React.ChangeEvent<HTMLInputElement>) => {
-      const { target: { value: password } } = event;
+      const {
+        target: { value: password },
+      } = event;
       setState({ password });
     },
 
@@ -43,11 +48,11 @@ export default function LoginPageContainerHook() {
         }),
       });
 
-      if(response.redirected) {
+      if (response.redirected) {
         window.location.href = response.url;
       }
-    }
-  }
+    },
+  };
 
   return self;
 }

@@ -1,11 +1,10 @@
 import React from 'react';
 
-import LoginPageContainerHook from '../containers/pages/login/LoginPageContainerHook';
+import { LoginPageContainerHook } from '../containers/pages/login/LoginPageContainerHook';
 
-export interface Props {
-}
+// export interface Props {}
 
-const LoginPage: React.FC<Props> = () => {
+const LoginPage: React.FC = () => {
   const {
     state: { id, password },
     onChangeId,
@@ -24,7 +23,9 @@ const LoginPage: React.FC<Props> = () => {
         <span>password</span>
         <input type="password" value={password} onChange={onChangePassword} />
       </div>
-      <button onClick={onClickLogin}>login</button>
+      <button type="button" onClick={onClickLogin}>
+        login
+      </button>
     </>
   );
 };

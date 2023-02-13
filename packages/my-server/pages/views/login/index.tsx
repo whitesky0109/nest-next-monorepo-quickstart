@@ -10,4 +10,4 @@ LoginPage.getInitialProps = (ctx) => {
   return { pathname };
 };
 
-export default Page;
+export default LoginPage;

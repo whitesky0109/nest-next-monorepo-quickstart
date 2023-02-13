@@ -1,8 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import { NextPage, NextPageContext } from 'next';
+
 import { IPost } from '../../../types';
 import PostPreview from '../../../components/post-preview';
-import { BlogService } from '../../../src/modules/blog/blog.service';
+import BlogService from '../../../src/modules/blog/blog.service';
 
 interface Props {
   posts: IPost[];

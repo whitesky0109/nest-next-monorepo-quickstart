@@ -7,12 +7,12 @@ import {
   UseGuards,
 } from '@nestjs/common';
 
-import { BlogService } from './blog.service';
-import { JwtAuthGuard } from '../auth/strategies/jwt/guard';
+import BlogService from './blog.service';
+import JwtAuthGuard from '../auth/strategies/jwt/guard';
 
 @Controller('/blog')
 @UseGuards(JwtAuthGuard)
-export class BlogController {
+export default class BlogController {
   constructor(private service: BlogService) {}
 
   @Render('blog')
