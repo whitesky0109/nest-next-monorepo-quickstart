@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './button.css';
 
 /**
+ * @type {React.FC<ButtonProps>}
  * Primary UI component for user interaction
  */
 export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
@@ -50,3 +51,15 @@ Button.defaultProps = {
 };
 
 export default Button;
+
+/**
+@typedef {
+  React.ButtonHTMLAttributes<HTMLButtonElement>
+  & {
+    primary: boolean,
+    backgroundColor: string,
+    size: string,
+    label: React.ReactNode,
+  }
+} ButtonProps 
+*/
