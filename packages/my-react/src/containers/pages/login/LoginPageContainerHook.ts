@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 export interface ILoginPageContainerState {
   id?: string;
@@ -11,22 +11,21 @@ export const LoginPageContainerHook = () => {
     password: '',
   });
 
-  const setState = (item: ILoginPageContainerState = {}) => (
-    updateState((prev) => ({ ...prev, ...item }))
-  );
+  const setState = (item: ILoginPageContainerState = {}) =>
+    updateState(prev => ({ ...prev, ...item }));
 
   const self = {
     state,
     setState,
 
-    onChangeId: (event: React.ChangeEvent<HTMLInputElement>) => {
+    onChangeId: (event: ChangeEvent<HTMLInputElement>) => {
       const {
         target: { value: id },
       } = event;
       setState({ id });
     },
 
-    onChangePassword: (event: React.ChangeEvent<HTMLInputElement>) => {
+    onChangePassword: (event: ChangeEvent<HTMLInputElement>) => {
       const {
         target: { value: password },
       } = event;

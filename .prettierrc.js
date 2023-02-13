@@ -15,6 +15,7 @@ module.exports = {
   endOfLine: "auto",
 
   plugins: ['@trivago/prettier-plugin-sort-imports'],
+  importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
   importOrder: [
     "<THIRD_PARTY_MODULES>",
     "^components/(.*)$",

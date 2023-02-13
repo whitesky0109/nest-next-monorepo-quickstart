@@ -1,14 +1,7 @@
-import {
-  Controller,
-  Get,
-  NotFoundException,
-  Param,
-  Render,
-  UseGuards,
-} from '@nestjs/common';
+import { Controller, Get, NotFoundException, Param, Render, UseGuards } from '@nestjs/common';
 
-import BlogService from './blog.service';
 import JwtAuthGuard from '../auth/strategies/jwt/guard';
+import BlogService from './blog.service';
 
 @Controller('/blog')
 @UseGuards(JwtAuthGuard)

@@ -10,10 +10,11 @@ const mod = {
     },
   },
   extends: [
+    'eslint:recommended',
     'plugin:react/recommended',
-    "airbnb",
     'plugin:@typescript-eslint/recommended',
-    // "plugin:prettier/recommended"
+    "airbnb",
+    "plugin:prettier/recommended",
   ],
   globals: {
     Atomics: 'readonly',
