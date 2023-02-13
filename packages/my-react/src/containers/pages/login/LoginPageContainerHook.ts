@@ -32,7 +32,8 @@ export function LoginPageContainerHook() {
       setState({ password });
     },
 
-    onClickLogin: async (_: React.MouseEvent<HTMLButtonElement>) => {
+    // onClickLogin: async (_: React.MouseEvent<HTMLButtonElement>) => {
+    onClickLogin: async () => {
       const { id, password } = state;
 
       const response = await fetch('/auth/local', {

@@ -38,11 +38,6 @@ const mod = {
     'react/prop-types': 'error',
 
     'import/extensions': 'off',
-
-    '@typescript-eslint/no-unused-vars': ['error', {
-      argsIgnorePattern: '^_',
-      varsIgnorePattern: '^_'
-    }],
   },
   settings: {
     "import/resolver": {
