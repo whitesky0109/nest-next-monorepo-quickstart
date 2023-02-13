@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { PassportStrategy } from '@nestjs/passport';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { Strategy } from 'passport-kakao';
+import { Strategy, StrategyOption, VerifyFunction } from 'passport-kakao';
 
 import AuthService from '../../auth.service';
 
@@ -11,11 +11,11 @@ export default class KakaoStrategy extends PassportStrategy(Strategy) {
     super({
       clientID: '983a6749ac20c97d5b8d7060ab32fdb5',
       // clientSecret: '',
-      callbackURL: 'http://localhost:3000/auth/kakao/redirect'
-    });
+      callbackURL: 'http://localhost:3000/auth/kakao/redirect',
+    } as StrategyOption);
   }
 
-  async validate(accessToken, refreshToken, profile, done): Promise<any> {
+  validate: VerifyFunction = (accessToken, refreshToken, profile, done) => {
     // eslint-disable-next-line no-underscore-dangle
     const profileJson = profile._json;
     const kakaoAccount = profileJson.kakao_account;
