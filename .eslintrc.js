@@ -14,6 +14,7 @@ const mod = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     "airbnb",
+    "prettier"
     // 'plugin:prettier/recommended',
   ],
   globals: {
@@ -33,6 +34,7 @@ const mod = {
     'react',
     'react-hooks',
     '@typescript-eslint',
+    'import',
     'prettier',
   ],
   rules: {
@@ -45,6 +47,13 @@ const mod = {
       "jsx": "never",
       "ts": "never",
       "tsx": "never"
+    }],
+    "import/order": ["error", {
+      "newlines-between": "always",
+      alphabetize: {
+        order: 'asc', /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */
+        caseInsensitive: true /* ignore case. Options: [true, false] */
+      }
     }],
 
     "react/jsx-one-expression-per-line": "off",

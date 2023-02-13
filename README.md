@@ -18,3 +18,4 @@
 ### 23-02-13
 
 - [prettier로 뒤죽박죽 import 정리하기](https://velog.io/@himprover/prettier%EB%A1%9C-%EB%92%A4%EC%A3%BD%EB%B0%95%EC%A3%BD-import-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0)
+- [import/order](https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md)
