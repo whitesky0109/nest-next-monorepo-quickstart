@@ -1,25 +1,22 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import './button.css';
+import { ButtonStyled } from './ButtonStyled';
 
 /**
  * @type {React.FC<ButtonProps>}
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-  return (
-    <button
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
-};
+export const Button = ({ primary, backgroundColor, size, label, ...props }) => (
+  <ButtonStyled
+    primary={primary}
+    size={size}
+    style={backgroundColor && { backgroundColor }}
+    {...props}
+  >
+    {label}
+  </ButtonStyled>
+);
 
 Button.propTypes = {
   /**
