@@ -2,10 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Button } from './Button';
-import { HeaderStyled, TitleStyled, WelcomeStyled, WrapperStyled } from './HeaderStyled';
+import {
+  HeaderStyled, TitleStyled, WelcomeStyled, WrapperStyled,
+} from './HeaderStyled';
 import { Logo } from './Logo';
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }) => (
+export const Header = ({
+  user, onLogin, onLogout, onCreateAccount,
+}) => (
   <HeaderStyled>
     <WrapperStyled>
       <div>

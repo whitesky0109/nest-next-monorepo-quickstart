@@ -1,18 +1,19 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import { Header } from './Header';
 import { SectionStyled, TipStyled, TipWrapperStyled } from './PageStyled';
 
-export const Page = () => {
+export const Page = ({ name }) => {
   const [user, setUser] = React.useState();
 
   return (
     <article>
       <Header
         user={user}
-        onLogin={() => setUser({ name: 'Jane Doe' })}
+        onLogin={() => setUser({ name })}
         onLogout={() => setUser(undefined)}
-        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
+        onCreateAccount={() => setUser({ name })}
       />
 
       <SectionStyled>
@@ -32,7 +33,7 @@ export const Page = () => {
         <ul>
           <li>
             Use a higher-level connected component. Storybook helps you compose such data from the
-            {`"args"`} of child component stories
+            {'\'args\''} of child component stories
           </li>
           <li>
             Assemble data in the page component from your services. You can mock these services out
@@ -66,6 +67,14 @@ export const Page = () => {
       </SectionStyled>
     </article>
   );
+};
+
+Page.propTypes = {
+  name: PropTypes.string,
+};
+
+Page.defaultProps = {
+  name: 'Jane Doe',
 };
 
 export default Page;

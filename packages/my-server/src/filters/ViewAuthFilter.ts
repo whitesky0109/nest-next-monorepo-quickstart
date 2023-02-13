@@ -15,7 +15,8 @@ export default class ViewAuthFilter implements ExceptionFilter {
     const response = ctx.getResponse<Response>();
     // const status = exception.getStatus();
 
-    if (exception instanceof UnauthorizedException || exception instanceof ForbiddenException) {
+    if (exception instanceof UnauthorizedException
+      || exception instanceof ForbiddenException) {
       response.redirect('/login');
     } else {
       response.redirect('/error');

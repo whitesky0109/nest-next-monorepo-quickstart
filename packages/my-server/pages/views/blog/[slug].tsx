@@ -18,7 +18,7 @@ const Post: NextPage<Props> = ({ post: { title, content }, source }) => (
   <div>
     <h1>{title}</h1>
     <div>
-      {content.map(block => (
+      {content.map((block) => (
         <p key={`block-${block}`}>{block}</p>
       ))}
     </div>

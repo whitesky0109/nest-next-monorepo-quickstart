@@ -14,7 +14,7 @@ const mod = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     "airbnb",
-    "plugin:prettier/recommended",
+    // 'plugin:prettier/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -38,7 +38,7 @@ const mod = {
   rules: {
     'react/prop-types': 'error',
 
-    "object-curly-newline": "off",
+    // "object-curly-newline": "off",
 
     "import/extensions": ["error", "ignorePackages", {
       "js": "never",

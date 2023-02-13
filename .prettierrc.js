@@ -13,6 +13,7 @@ module.exports = {
   arrowParens: 'avoid',
   // windows에 뜨는 'Delete cr' 에러 해결
   endOfLine: "auto",
+  bracketSpacing: true,
 
   plugins: ['@trivago/prettier-plugin-sort-imports'],
   importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],

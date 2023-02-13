@@ -9,7 +9,7 @@ import jwtConstants from '../../constants';
 export default class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(private authService: AuthService) {
     super({
-      jwtFromRequest: ExtractJwt.fromExtractors([request => request?.cookies?.Authentication]),
+      jwtFromRequest: ExtractJwt.fromExtractors([(request) => request?.cookies?.Authentication]),
       ignoreExpiration: false,
       secretOrKey: jwtConstants.secret,
     });

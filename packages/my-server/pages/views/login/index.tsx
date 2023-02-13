@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 
 const LoginPage: NextPage = Page;
 
-LoginPage.getInitialProps = ctx => {
+LoginPage.getInitialProps = (ctx) => {
   const { pathname } = ctx;
 
   return { pathname };

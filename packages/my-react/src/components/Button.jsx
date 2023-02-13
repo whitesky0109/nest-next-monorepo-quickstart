@@ -7,7 +7,9 @@ import { ButtonStyled } from './ButtonStyled';
  * @type {React.FC<ButtonProps>}
  * Primary UI component for user interaction
  */
-export const Button = ({ primary, backgroundColor, size, label, ...props }) => (
+export const Button = ({
+  primary, backgroundColor, size, label, ...props
+}) => (
   <ButtonStyled
     primary={primary}
     size={size}
