@@ -1,8 +1,8 @@
 import { Controller, Get, Render, Request, UseFilters, UseGuards } from '@nestjs/common';
 import express from 'express';
 
-import ViewAuthFilter from './filters/ViewAuthFilter';
-import JwtAuthGuard from './modules/auth/strategies/jwt/guard';
+import ViewAuthFilter from '../filters/ViewAuthFilter';
+import JwtAuthGuard from '../modules/auth/providers/jwt/guard';
 
 @Controller()
 @UseFilters(ViewAuthFilter)

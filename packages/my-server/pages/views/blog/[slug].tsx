@@ -1,7 +1,7 @@
 import { NextPage, NextPageContext } from 'next';
 import React from 'react';
 
-import BlogService from '../../../src/modules/blog/blog.service';
+import BlogService from '../../../src/providers/blog.service';
 import { IPost } from '../../../types';
 
 interface Props {

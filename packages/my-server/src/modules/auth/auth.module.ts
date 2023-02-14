@@ -4,12 +4,12 @@ import { PassportModule } from '@nestjs/passport';
 
 import UsersModule from '../users/users.module';
 
-import AuthController from './auth.controller';
-import AuthService from './auth.service';
 import jwtConstants from './constants';
-import JwtStrategy from './strategies/jwt/strategy';
-import KakaoStrategy from './strategies/kakao/strategy';
-import LocalStrategy from './strategies/local/strategy';
+import AuthController from './controllers/auth.controller';
+import AuthService from './providers/auth.service';
+import JwtStrategy from './providers/jwt/strategy';
+import KakaoStrategy from './providers/kakao/strategy';
+import LocalStrategy from './providers/local/strategy';
 
 @Module({
   imports: [

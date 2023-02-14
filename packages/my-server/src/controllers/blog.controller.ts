@@ -1,8 +1,7 @@
 import { Controller, Get, NotFoundException, Param, Render, UseGuards } from '@nestjs/common';
 
-import JwtAuthGuard from '../auth/strategies/jwt/guard';
-
-import BlogService from './blog.service';
+import JwtAuthGuard from '../modules/auth/providers/jwt/guard';
+import BlogService from '../providers/blog.service';
 
 @Controller('/blog')
 @UseGuards(JwtAuthGuard)

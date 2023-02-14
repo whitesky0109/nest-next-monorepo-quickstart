@@ -1,9 +1,8 @@
-// import express from 'express';
 import {
-  Controller, Get, Render, Request, UseFilters,
+  Controller, Get, Render, UseFilters,
 } from '@nestjs/common';
 
-import ViewAuthFilter from '../../filters/ViewAuthFilter';
+import ViewAuthFilter from '../../../filters/ViewAuthFilter';
 
 @Controller('login')
 @UseFilters(ViewAuthFilter)

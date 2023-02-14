@@ -3,7 +3,7 @@ import { PassportStrategy } from '@nestjs/passport';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Strategy, StrategyOption, VerifyFunction } from 'passport-kakao';
 
-import AuthService from '../../auth.service';
+import AuthService from '../auth.service';
 
 @Injectable()
 export default class KakaoStrategy extends PassportStrategy(Strategy) {
