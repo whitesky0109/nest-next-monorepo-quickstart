@@ -21,11 +21,11 @@ export default class KakaoStrategy extends PassportStrategy(Strategy) {
     const kakaoAccount = profileJson.kakao_account;
 
     const payload = {
-      username: kakaoAccount.profile.kakao_account as any,
+      username: kakaoAccount.profile.kakao_account as string,
       kakaoId: profileJson.id,
-      sub: profileJson.id,
+      sub: profileJson.id as number | string,
       email: kakaoAccount.has_email && kakaoAccount.email_needs_agreement
-        ? kakaoAccount.email
+        ? kakaoAccount.email as string
         : null,
     };
     done(null, payload);

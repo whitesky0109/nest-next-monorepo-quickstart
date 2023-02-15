@@ -26,10 +26,10 @@ import BlogService from './providers/blog.service';
   controllers: [AppController, BlogController],
   providers: [BlogService],
 })
-export default class AppModule { }
+class Root { }
 
 async function bootstrap() {
-  const server = await NestFactory.create(AppModule);
+  const server = await NestFactory.create(Root);
 
   server.use(cookieParser());
 
